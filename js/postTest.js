@@ -1,5 +1,5 @@
 function submitForm(){
-    var formData = new FormData(document.getElementById("postForm"))
+    var formData = new FormData(document.getElementById("postForm"));
 
     fetch('http://localhost:8080/create-post', {
         method: 'POST',
@@ -7,10 +7,13 @@ function submitForm(){
     })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
-            window.location.href = '/posts.html';
+            if (data.redirect) {
+                window.location.href = data.redirect;
+            } else {
+                console.log('Success:', data)
+            }
         })
         .catch(error => {
-            console.error('Error', error);
-        });
+            console.error('Error:', error)
+        })
 }

@@ -1,4 +1,10 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        fetchPosts();
+    }, 1000)
+})
+
+function fetchPosts() {
     var postsList = document.getElementById('postsList');
 
     fetch('http://localhost:8080/posts')
@@ -13,4 +19,4 @@ document.addEventListener('DOMContentLoaded', function(){
         .catch(error => {
             console.error('Error fetching posts:', error)
         })
-})
+}
