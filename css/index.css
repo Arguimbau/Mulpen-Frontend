@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+li, a, button {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: yellow;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: lavender;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: lavender;
+}
+
+.logo{
+    width: 20%;
+    height: 20%;
+
+}
+
+p{
+    font-family: Arial, sans-serif;
+}
+
+p.description{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: fixed;
+    bottom: 10%;
+    left: 65%;
+}
+
+.nav_some{
+    list-style: none;
+}
+
+.nav_some li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav_some li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_some li a:hover{
+    color: pink;
+}
+
