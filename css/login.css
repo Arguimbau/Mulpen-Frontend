@@ -1,5 +1,5 @@
 .background{
-    background-image: url("../media/pexels-karl-solano-2883049.jpg");
+    background-image: url("../images/pexels-karl-solano-2883049.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -9,7 +9,7 @@
     z-index: 1;
 }
 .logo{
-    background-image: url("../media/mulpenlogo1.png");
+    background-image: url("../images/mulpenlogo1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
