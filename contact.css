@@ -16,17 +16,26 @@ h1, h2 {
 
 ul {
     list-style: none;
-    display: flex; /* Vis listeelementer som en række */
-    flex-wrap: wrap; /* Hvis der ikke er nok plads, skal elementerne flytte sig ned til næste række */
 }
 
 li {
+    display: flex; /* Tilføj denne linje */
     margin-right: 20px; /* Afstand mellem listeelementer */
     margin-bottom: 10px;
 }
 
 footer {
     margin-top: 50px;
+}
+
+.logo1{
+    background-image: url("/images/mulpenlogo3.png");
+    z-index: 100;
+    background-repeat:no-repeat;
+    background-position:left;
+    background-size: contain;
+    height: 50px;
+    margin-left: 20px;
 }
 
 img {
@@ -36,7 +45,33 @@ img {
     flex-direction: column;
 }
 
-logo1{
-    margin-left: 80%;
-    margin-bottom: 20%;
+.members {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.members li {
+    text-align: center;
+    display: flex;
+    margin: 10px; /* Juster margener efter behov */
+    width: 200px; /* Sæt en fast bredde for hver medlemsboks */
+}
+
+.members img {
+    max-width: 35%;
+    height: 80%;
+    margin-bottom: 5px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.map {
+    filter: grayscale(100%);
 }
