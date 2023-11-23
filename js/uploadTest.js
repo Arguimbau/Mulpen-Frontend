@@ -7,8 +7,9 @@ function uploadFile(){
     formData.append('file', file);
     formData.append('description', description);
 
-    fetch('http://localhost:8080/upload', {
+    fetch('http://localhost:8080/media/upload', {
         method: 'POST',
+        mode: 'cors',
         body: formData
     })
         .then(response => response.text())
