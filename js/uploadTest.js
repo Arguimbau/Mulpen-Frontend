@@ -1,9 +1,11 @@
 function uploadFile(){
     var fileInput = document.getElementById('fileInput');
     var file = fileInput.files[0];
+    var description = document.getElementById('descriptionInput').value;
 
     var formData = new FormData();
     formData.append('file', file);
+    formData.append('description', description);
 
     fetch('http://localhost:8080/upload', {
         method: 'POST',
