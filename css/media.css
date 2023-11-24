@@ -1,3 +1,55 @@
+@font-face {
+    font-family: 'Akkurat-Bold';
+    src: url("font/Akkurat-Bold.ttf") format('truetype');
+}
+
 body {
     background-color: #E4F4E5;
+    font-family: 'Akkurat-Bold', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.uploadForm {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+/* upload logo style */
+.uploadLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin-top: -13%;
+    margin-left: 10%;
+
+    transition: transform 150ms ease-in;
+    z-index: 10;
+
+    :is(svg) {
+        width: 40%;
+        height: 40%;
+    }
+}
+
+input[type="file"],
+input[type="text"],
+input[type="button"] {
+    font-family: 'Akkurat-Bold', sans-serif;
+    margin-bottom: 10%;
+}
+
+#uploadStatus {
+    text-align: center;
 }
