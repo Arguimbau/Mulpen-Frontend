@@ -1,9 +1,7 @@
 body {
-    background-color: white;
     color: black;
     font-family: Akkurat, sans-serif;
-    background-color:#e4f4e5;
-
+    background-color:#e4f4e5 !important;
 }
 
 .container{
@@ -42,12 +40,7 @@ li {
     margin-left: 20px;
 }
 
-img {
-    max-width: 10%; /* Gør billedet responsivt, så det ikke overstiger bredden af headeren */
-    height: auto; /* Bevar billedets proportioner */
-    display: flex;
-    flex-direction: column;
-}
+
 
 .members {
     list-style: none;
@@ -79,7 +72,7 @@ img {
 }
 
 .map {
-    filter: grayscale(100%);
+    filter: grayscale(70%);
 }
 
 header{
@@ -116,11 +109,17 @@ header{
     padding-left: 5px;
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
-    background-color: white;
+    background-color: #e4f4e5;
     width: 100%;
     z-index: 100;
     text-align: center;
