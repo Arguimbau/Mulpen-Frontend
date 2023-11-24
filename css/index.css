@@ -1,11 +1,10 @@
-*{
-    box-sizing: border-box;
+body {
     margin: 0;
     padding: 0;
     background-color: #e4f4e5;
 }
 
-li, a, button {
+li, a {
     font-family: Arial, sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -25,8 +24,10 @@ header{
 }
 
 .nav_links li {
+    justify-content: right;
     display: inline-block;
     padding: 0px 30px;
+    cursor: pointer;
 }
 
 .nav_links li a {
@@ -35,18 +36,6 @@ header{
 
 .nav_links li a:hover {
     color: #5b1010;
-}
-
-button{
-    padding: 9px 25px;
-    background-color: lavender;
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: lavender;
 }
 
 .logo{
@@ -59,58 +48,36 @@ p{
     font-family: Arial, sans-serif;
 }
 
-p.description{
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-#myVideo {
+.video-container {
     position: absolute;
     align-items: center;
-    margin-left: 17%;
-    margin-bottom: 40%;
-    min-width: 3%;
-    min-height: 3%;
-    z-index: 10;
+    justify-content: center;
+    z-index: 1;
+}
+.description {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    margin-left: 15%;
+    margin-top: 16%;
+    font-size: 40px;
+
+    color: white;
+    -webkit-text-stroke: thin black;
 }
 
 footer{
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: #111;
-    height: auto;
-    width: 100vw;
-    color: #fff;
+    background-color: white;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
 }
 
-.nav_some{
-    list-style-type: none;
+.some{
+    width: 50px;
+    height: 50px;
 }
-
-.nav_some li {
-  margin: 0 10px;
-}
-
-.nav_some a {
-    padding: 5px;
-    border-radius: 50%;
-}
-
-.nav_some li a {
-    display: block;
-    transition: all 0.3s ease 0s;
-}
-
-.nav_some li a:hover{
-    color: pink;
-}
-
-
-.nav_some img {
-    width: 17%;
-    height: 17%;
-}
-
