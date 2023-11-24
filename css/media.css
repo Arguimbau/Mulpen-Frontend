@@ -40,6 +40,7 @@ body {
 
 /* upload form image + buttons */
 .uploadForm {
+    margin-bottom: -3%;
     margin-left: 3%;
     border-radius: 4%;
     padding: 5%;
@@ -62,6 +63,7 @@ form {
 #fileInput {
     margin-left: 10%;
 }
+
 
 /* all buttons style */
 textarea,
