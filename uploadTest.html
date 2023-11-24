@@ -15,10 +15,10 @@
             <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
         </svg>
     </div>
-
+    <!-- upload form all the buttons -->
     <form id="uploadForm" enctype="multipart/form-data">
         <input type="file" name="file" id="fileInput"/>
-        <input type="text" name="description" id="descriptionInput">
+        <textarea name="description" id="descriptionInput" placeholder="Indtast beskrivelse..."></textarea>
         <input id="uploadButton" type="button" value="Upload" onclick="uploadFile()">
     </form>
 </div>
