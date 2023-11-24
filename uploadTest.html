@@ -18,12 +18,18 @@
     <!-- upload form all the buttons -->
     <form id="uploadForm" enctype="multipart/form-data">
         <input type="file" name="file" id="fileInput">
-        <textarea name="description" id="descriptionInput" placeholder="Indtast beskrivelse..."></textarea>
+        <textarea name="description" id="descriptionInput" placeholder="Indtast beskrivelse..." cols="50" rows="10"></textarea>
         <input id="uploadButton" type="button" value="Upload" onclick="uploadFile()">
     </form>
 </div>
 
-<div id="uploadStatus"></div>
+
+
+
+<div class="center-line"></div>
+
+
+<div id="snackbar"></div>
 
 <script src="js/uploadTest.js"></script>
 </body>
