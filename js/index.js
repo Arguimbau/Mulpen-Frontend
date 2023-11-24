@@ -9,3 +9,4 @@ document.getElementById("contactLink").addEventListener("click", function () {
 document.getElementById("aboutLink").addEventListener("click", function () {
     window.location.href = "about.html"
 });
+
