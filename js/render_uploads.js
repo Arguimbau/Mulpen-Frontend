@@ -2,13 +2,16 @@ const imageExtenstions = ["jpg", "jpeg", "png", "gif", "webp"];
 const videoExtenstions = ["mp4", "mkv", "webm", "mov", "avi"];
 const audioExtenstions = ["mp3", "wav", "ogg"];
 
-function createMediaElement(url, description) {
+function createMediaElement(url) {
   const extension = url.split(".").pop();
 
   const div = document.createElement("div");
-  const h3 = document.createElement("h3");
-  h3.textContent = description;
-  div.appendChild(h3);
+/*
+  const imageText = document.createElement("div");
+  imageText.classList.add("desc")
+  imageText.textContent = description;
+
+ */
 
   if (imageExtenstions.includes(extension)) {
     const img = document.createElement("img");
@@ -52,12 +55,23 @@ async function loadMedias() {
   }
 
   for ( const media of await medias.json() ) {
+    const imageText = document.createElement("div");
+    imageText.classList.add("desc")
+    imageText.textContent = media.description
+
+    const fullImage = document.createElement("a");
+    fullImage.href = `${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`
+
     const gallery = document.createElement("div");
-    gallery.className = "gallery";
-    const newElement = createMediaElement(`${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`, media.description);
-    mediaContainer.appendChild(newElement);
+    gallery.classList.add("gallery")
 
+    const newElement = createMediaElement(`${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`);
 
+    mediaContainer.appendChild(gallery)
+    gallery.appendChild(fullImage);
+    fullImage.appendChild(newElement)
+    gallery.appendChild(imageText)
+    //mediaContainer.appendChild(newElement);
   }
 }
 
