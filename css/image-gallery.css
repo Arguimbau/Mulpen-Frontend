@@ -8,7 +8,8 @@
 }
 
 h2 {
-    align-content: center;
+    display: flex;
+    justify-content: center;
     font-size: xxx-large;
 }
 
