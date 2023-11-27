@@ -1,4 +1,4 @@
-const imageExtenstions = ["jpg", "jpeg", "png", "gif"];
+const imageExtenstions = ["jpg", "jpeg", "png", "gif", "webp"];
 const videoExtenstions = ["mp4", "mkv", "webm", "mov", "avi"];
 const audioExtenstions = ["mp3", "wav", "ogg"];
 
@@ -52,8 +52,12 @@ async function loadMedias() {
   }
 
   for ( const media of await medias.json() ) {
+    const gallery = document.createElement("div");
+    gallery.className = "gallery";
     const newElement = createMediaElement(`${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`, media.description);
     mediaContainer.appendChild(newElement);
+
+
   }
 }
 
