@@ -65,8 +65,10 @@ header{
 
 footer{
     position: absolute;
+    left: 50%;  /* Set the left position to the center */
+    transform: translateX(-50%);  /* Center the element */
     bottom: 0;
-    background-color: white;
+    background-color: #e4f4e5;
     width: 100%;
     z-index: 100;
     text-align: center;
