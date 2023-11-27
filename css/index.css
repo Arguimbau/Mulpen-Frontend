@@ -3,6 +3,10 @@ body {
     padding: 0;
     background-color: #e4f4e5;
 }
+.container {
+    height: 100vh; /* 100% of the viewport height */
+}
+
 
 p{
     font-family: Arial, sans-serif;
@@ -14,16 +18,20 @@ p{
     justify-content: center;
     z-index: 1;
 }
+
 .description {
-    position: absolute;
+    position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
     z-index: 2;
-    margin-left: 15%;
     margin-top: 16%;
     font-size: 40px;
-
     color: white;
     -webkit-text-stroke: thin black;
+}
+#footer-placeholder {
+    position: relative;
+    height: 10vh;
+    clear: both;
 }
