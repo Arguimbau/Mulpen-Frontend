@@ -12,6 +12,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 10%;
+
 }
 
 .nav_links{
@@ -34,7 +35,7 @@ header{
 }
 
 .logo{
-    width: 8%;
-    height: 8%;
-    padding-left: 5px;
+    width: 10%;
+    height: 10%;
+
 }

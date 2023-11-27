@@ -10,3 +10,15 @@ document.getElementById("aboutLink").addEventListener("click", function () {
     window.location.href = "about.html"
 });
 
+document.getElementById("fb").addEventListener("click", function () {
+    window.location.href = "about.html"
+});
+
+document.getElementById("insta").addEventListener("click", function () {
+    window.location.href = "https://www.instagram.com/mulpenmedia/"
+});
+
+
+
+
+
