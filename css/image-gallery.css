@@ -75,10 +75,12 @@ body {
     }
 }
 
+video {
+    outline: 0px;
+}
 
 
-
-.gallery img {
+.gallery video {
     width: 300px;
     height: 300px;
     object-fit: cover;
