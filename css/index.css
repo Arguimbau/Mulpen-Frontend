@@ -19,8 +19,15 @@ p{
     position: absolute;
     align-items: center;
     justify-content: center;
+    transform: translate(30%, 5%);
     z-index: 1;
     height: 50%;
+
+}
+
+#myVideo{
+    width: 140%;
+
 }
 
 .description {
