@@ -110,8 +110,8 @@ input[type="file"]::file-selector-button:active {
 
 #snackbar {
     visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
+    min-width: 30%;
+    margin-left: -12.5%;
     background-color: #fff;
     color: #333;
     text-align: center;
@@ -120,7 +120,7 @@ input[type="file"]::file-selector-button:active {
     position: fixed;
     z-index: 1;
     left: 46.15%;
-    bottom: 30px;
+    bottom: 3%;
 }
 
 /* SNACKBAR CONFIGURATION */
