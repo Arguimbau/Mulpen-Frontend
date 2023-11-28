@@ -1,5 +1,5 @@
 document.getElementById("productionLink").addEventListener("click", function () {
-    window.location.href = "products.html"
+    window.location.href = "viewVideo.html"
 });
 
 document.getElementById("contactLink").addEventListener("click", function () {
@@ -11,7 +11,7 @@ document.getElementById("aboutLink").addEventListener("click", function () {
 });
 
 document.getElementById("fb").addEventListener("click", function () {
-    window.location.href = "about.html"
+    window.location.href = "https://www.facebook.com/profile.php?id=61553743093438"
 });
 
 document.getElementById("insta").addEventListener("click", function () {
