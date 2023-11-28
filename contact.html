@@ -6,77 +6,86 @@
     <title>Mulpen Productions Kontakt</title>
     <link rel="stylesheet" href="contact.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="objects/header.css">
+    <link rel="stylesheet" href="objects/footer.css">
 </head>
 
 <body>
 <div class="container">
-<header>
-    <img class="logo" src="images/Mulpen logo2.png" alt="logo">
-    <nav>
-        <ul class="nav_links">
-            <li><h3 href="#" id="productionLink">produktioner</h3></li>
-            <li><h3 href="#" id="contactLink">kontakt</h3></li>
-            <li><h3 href="#" id="aboutLink">om mulpen</h3></li>
-
-        </ul>
-    </nav>
-</header>
+<div id="header-placeholder"></div>
 
 <section>
-    <h2>Medlemmer</h2>
     <ul class="members">
         <li>
-            <img src="/images/profil.jpeg">
+            <div class="profilePicture">
+            <img src="images/profile1.jpg">
+            </div>
             <div>
-                <strong>Navn:</strong>
+                <strong>Amalie Vixø Drøscher</strong>
                 <br>
-                Medlem 1
+                Administrerende direktør
+                Tilrettelægger, fotograf og klipper
                 <br>
-                <strong>Telefon:</strong> Telefonnummer 1
+                <strong>+45 2064 9953</strong>
                 <br>
-                <a href="mailto:someone@yoursite.com">email@example.com</a>
+                <a href="mailto:amalie@mulpen.dk">amalie@mulpen.dk</a>
             </div>
         </li>
 
         <li>
-            <img src="/images/profil.jpeg">
+            <div class="profilePicture">
+            <img src="images/profile2.jpg">
+            </div>
             <div>
-                <strong>Navn:</strong>
+                <strong>Konrad Jon</strong>
                 <br>
-                Medlem 2
+                Underdirektør
                 <br>
-                <strong>Telefon:</strong> Telefonnummer 2
+                Producer og økonomiansvarlig
                 <br>
-                <a href="mailto:someone@yoursite.com">email@example.com</a>
+                <strong>+45 3131 9391</strong>
+                <br>
+                <a href="mailto:konrad@mulpen.dk">konrad@mulpen.dk</a>
             </div>
         </li>
 
         <li>
-            <img src="/images/profil.jpeg">
+            <div class="profilePicture">
+            <img src="images/profile3.jpg">
+            </div>
             <div>
-                <strong>Navn:</strong>
+                <strong>Emil Holmsteen</strong>
                 <br>
-                Medlem 3
+                Co-founder
                 <br>
-                <strong>Telefon:</strong> Telefonnummer 3
+                Skuespiller og idéudvikler
                 <br>
-                <a href="mailto:someone@yoursite.com">email@example.com</a>
+                <strong>+45 7170 0678</strong>
+                <br>
+                <a href="mailto:emil@mulpen.dk">emil@mulpen.dk</a>
             </div>
         </li>
 
         <li>
-            <img src="/images/profil.jpeg">
+            <div class="profilePicture">
+            <img src="images/profile4.jpg">
+            </div>
             <div>
-                <strong>Navn:</strong>
+                <strong>Gustav Halfdan</strong>
                 <br>
-                Medlem 4
+                Co-founder
                 <br>
-                <strong>Telefon:</strong> Telefonnummer 4
+                Komiker og idéudvikler
                 <br>
-                <a href="mailto:someone@yoursite.com">email@example.com</a>
+                <strong>+45 2032 1659</strong>
+                <br>
+                <a href="mailto:gustav@mulpen.dk">gustav@mulpen.dk</a>
             </div>
         </li>
     </ul>
+<br>
+<br>
+<br>
 </section>
 
 <section>
@@ -86,10 +95,15 @@
 
 </section>
 </div>
-<footer>
-    <a href="#"><img src="images/FBroed.png" alt="Facebook" class="some"></a>
-    <a href="#"><img src="images/InstaRoed.png" alt="Instagram" class="some"></a>
-</footer>
+<div id="footer-placeholder"></div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/footerHeader.js"></script>
+<script>
+    $(function(){
+        $("#header-placeholder").load("/objects/header.html");
+        $("#footer-placeholder").load("/objects/footer.html");
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
