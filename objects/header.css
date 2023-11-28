@@ -18,6 +18,10 @@ header{
     z-index: 2;
 }
 
+.nav {
+    position: absolute;
+}
+
 .nav_links{
     list-style: none;
     text-decoration: none;
