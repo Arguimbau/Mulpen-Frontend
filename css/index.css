@@ -2,9 +2,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #e4f4e5;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .container {
-    height: 100vh; /* 100% of the viewport height */
+    position: relative;
+    min-height: 90vh; /* set at 90 to avoid overflow*/
 }
 
 
@@ -17,17 +20,19 @@ p{
     align-items: center;
     justify-content: center;
     z-index: 1;
+    height: 50%;
 }
 
 .description {
     position: relative;
     align-items: center;
     justify-content: center;
-    text-align: center;
     z-index: 2;
     margin-top: 16%;
-    font-size: 40px;
+    left: 35%;
+    font-size: 30px;
     color: white;
+    font-family: 'Poppins', sans-serif;
     -webkit-text-stroke: thin black;
 }
 #footer-placeholder {
