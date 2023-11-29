@@ -10,18 +10,6 @@
     <script src="/js/config.js"></script>
 </head>
 <body>
-<!--
-<header>
-    <img class="logo" src="images/mulpenlogo1.png" alt="logo">
-    <nav>
-        <ul class="nav_links">
-            <li><h3 href="#" id="productionLink">produktioner</h3></li>
-            <li><h3 href="#" id="contactLink">kontakt</h3></li>
-            <li><h3 href="#" id="aboutLink">om mulpen</h3></li>
-        </ul>
-    </nav>
-</header>
--->
 
 <div class="uploadForm">
     <!-- upload logo above the upload form -->
@@ -34,7 +22,8 @@
     <!-- upload form all the buttons -->
     <form id="uploadForm" enctype="multipart/form-data">
         <input type="file" name="file" id="fileInput">
-        <textarea name="description" id="descriptionInput" placeholder="Indtast beskrivelse..." cols="50" rows="10"></textarea>
+        <textarea name="description" id="descriptionInput" placeholder="Indtast beskrivelse..." cols="50"
+                  rows="10"></textarea>
         <input id="uploadButton" type="button" value="Upload" onclick="uploadFile()">
     </form>
 </div>
@@ -45,6 +34,6 @@
 
 <div id="snackbar"></div>
 
-<script src="js/uploadTest.js"></script>
+<script src="js/uploadMedia.js"></script>
 </body>
 </html>
