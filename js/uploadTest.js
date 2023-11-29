@@ -1,47 +1,42 @@
 // upload file to site
 function uploadFile() {
-    var fileInput = document.getElementById('fileInput');
-    var file = fileInput.files[0];
-    var description = document.getElementById('descriptionInput').value;
+  var fileInput = document.getElementById('fileInput');
+  var file = fileInput.files[0];
+  var description = document.getElementById('descriptionInput').value;
 
-    var formData = new FormData();
+  var formData = new FormData();
 
-    var snackbar = document.getElementById('snackbar')
+  var snackbar = document.getElementById('snackbar')
 
-    formData.append('file', file);
-    formData.append('description', description);
+  formData.append('file', file);
+  formData.append('description', description);
 
-    fetch(`${API_BASE}/media/upload`, {
-        method: 'POST',
-        mode: 'cors',
-        body: formData
+  fetch(`${API_BASE}/media/upload`, {
+    method: 'POST',
+    mode: 'cors',
+    body: formData
+  })
+    .then(response => response.text())
+    .then(message => {
+
+      snackbar.innerHTML = message;
+      snackbar.className = "show";
+
+      setTimeout(function () {
+        snackbar.className = snackbar.className.replace("show", "");
+      }, 8000)
+
     })
-        .then(response => response.text())
-        .then(message => {
+    .catch(error => {
+      console.error('Error during file upload:', error);
+      snackbar.innerHTML = 'Error during file upload.';
+      snackbar.className = "show";
 
-            snackbar.innerHTML = message;
-            snackbar.className = "show";
+      setTimeout(function () {
+        snackbar.className = snackbar.className.replace("show", "");
+      }, 8000)
 
-
-            setTimeout(function () {
-                snackbar.className = snackbar.className.replace("show", "");
-            }, 8000)
-
-
-
-
-        })
-        .catch(error => {
-            console.error('Error during file upload:', error);
-            snackbar.innerHTML = 'Error during file upload.';
-            snackbar.className = "show";
-
-            setTimeout(function () {
-                snackbar.className = snackbar.className.replace("show", "");
-            }, 8000)
-
-
-        })
+    })
 }
 
 
