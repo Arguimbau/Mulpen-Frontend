@@ -1,0 +1,22 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e4f4e5;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    min-height: 50px;
+    padding: 1%;
+}
+
+.some{
+    width: 30px;
+    height: 30px;
+}
+
+/* For space between the logos */
+.some:first-child {
+    margin-right: 50px;
+}
