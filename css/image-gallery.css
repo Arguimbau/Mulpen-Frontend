@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Akkurat-Bold';
+    src: url("/font/Akkurat-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Akkurat';
+    src: url("/font/Akkurat.ttf") format('truetype');
+}
+
+* {
+    font-family: 'Akkurat-Bold', sans-serif;
+}
+
+body {
+    background-color: #E4F4E5 !important;
+    overflow-x: hidden;
+}
+
+#media-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.gallery {
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    width: auto;
+    background-color: #5B1010;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+    animation: fadein 0.5s forwards;
+}
+
+.gallery:not:hover {
+    animation: fadout 0.5s forwards;
+}
+
+@keyframes fadein {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes fadeout {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+video {
+    outline: 0px;
+}
+
+
+.gallery video {
+    width: 600px;
+    height: 337.5px;
+    object-fit: cover;
+}
+
+.desc {
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 550px;
+    height: 10vh;
+    overflow-wrap: break-word;
+    font-family: 'Akkurat', sans-serif;
+}
