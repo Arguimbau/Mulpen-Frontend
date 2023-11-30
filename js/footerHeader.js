@@ -17,3 +17,8 @@ document.getElementById("fb").addEventListener("click", function () {
 document.getElementById("insta").addEventListener("click", function () {
     window.location.href = "https://www.instagram.com/mulpenmedia/"
 });
+
+
+
+
+
