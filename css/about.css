@@ -6,3 +6,19 @@ body {
     font-family: 'Akkurat b', sans-serif;
     color: #2E475D;
 }
+
+h2 {
+    text-align: center;
+    margin-right: 22%;
+}
+
+.about {
+    margin-top: 10%;
+    margin-left: 22%;
+    text-align: left;
+    font-size: larger;
+}
+
+
+
+
