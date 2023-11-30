@@ -6,8 +6,6 @@ li, a {
     text-decoration: none;
 }
 
-
-
 header{
     display: flex;
     width: 112%;
@@ -16,8 +14,6 @@ header{
     align-items: center;
     padding: 10px 10% 10px 0;
     z-index: 2;
-    white-space: nowrap;
-    max-width: 100%
 }
 
 .nav {
