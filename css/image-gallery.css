@@ -12,19 +12,15 @@
     font-family: 'Akkurat-Bold', sans-serif;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-    font-size: xxx-large;
-}
-
 body {
     background-color: #E4F4E5 !important;
     overflow-x: hidden;
 }
 
 #media-container {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -73,8 +69,8 @@ video {
 
 
 .gallery video {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 337.5px;
     object-fit: cover;
 }
 
@@ -84,8 +80,8 @@ video {
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 250px;
-    height: 15vh;
+    width: 550px;
+    height: 10vh;
     overflow-wrap: break-word;
     font-family: 'Akkurat', sans-serif;
 }
