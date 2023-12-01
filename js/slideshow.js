@@ -1,20 +1,15 @@
-let slideIndex = 0;
-showSlides();
-let slideshow = document.getElementById("mySlides");
-
-function showSlides() {
+let index = 0;
+displayImages();
+function displayImages() {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    const images = document.getElementsByClassName("image");
+    for (i = 0; i < images.length; i++) {
+        images[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-
+    index++;
+    if (index > images.length) {
+        index = 1;
+    }
+    images[index-1].style.display = "block";
+    setTimeout(displayImages, 2000);
 }
-
-
-setTimeout(function () {
-  slideshow.className.replace("show", "");
-}, 8000)
