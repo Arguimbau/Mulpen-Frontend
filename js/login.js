@@ -1,10 +1,11 @@
 const login = "http://localhost:8080/login";
+
 function performLogin() {
-    const email = document.getElementById("Username").value;
+    const username = document.getElementById("Username").value;
     const password = document.getElementById("Password").value;
 
     const userData = {
-        username: email,
+        username: username,
         password: password
     };
 
@@ -15,7 +16,14 @@ function performLogin() {
         },
         body: JSON.stringify(userData)
     })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                // Handle HTTP error status (e.g., 401 for unauthorized)
+                console.error("Login failed, Please try again");
+                return Promise.reject("Bad credentials");
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.token) {
                 // Store the token securely, for example in localStorage
@@ -24,10 +32,12 @@ function performLogin() {
                 window.location.href = "dashboard.html";
             } else {
                 console.error("Login failed, Please try again");
+                // Add code to handle failed login, e.g., display an error message
             }
         })
         .catch(error => {
             console.error("An error occurred:", error);
+            // Add code to handle other errors, if needed
         });
 }
 
@@ -36,4 +46,3 @@ loginButton.addEventListener("click", (event) => {
     event.preventDefault();
     performLogin();
 });
-
