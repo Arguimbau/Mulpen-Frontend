@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Akkurat-Bold';
+    src: url("/font/Akkurat-Bold.ttf") format('truetype');
+}
+
+* {
+    font-family: 'Akkurat-Bold', sans-serif;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: xxx-large;
+}
+
+body {
+    background-color: #E4F4E5 !important;
+}
+
+#media-container {
+
+}
+
+
+.gallery {
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    width: auto;
+    background-color: #5B1010;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+    animation: fadein 0.5s forwards;
+}
+
+.gallery:not:hover {
+    animation: fadout 0.5s forwards;
+}
+
+@keyframes fadein {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes fadeout {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+video {
+    outline: 0px;
+}
+
+
+.gallery video {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.desc {
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+    height: 5vh;
+}
