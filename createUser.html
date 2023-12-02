@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/createUser.css">
     <link rel="stylesheet" href="objects/header.css">
     <link rel="stylesheet" href="objects/footer.css">
     <title>Opret Bruger</title>
@@ -16,42 +16,45 @@
 <div class="container">
     <div id="header-placeholder"></div>
 
-    <form id="create-user-form">
-        <label for="username">Brugernavn (Til login)</label>
-        <br>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Adgangskode</label>
-        <br>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <label for="confirm-password">Bekræft adgangskode</label>
-        <br>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-        <br>
-        <label for="name">Navn</label>
-        <br>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">Email</label>
-        <br>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="title">Titel i firmaet </label>
-        <br>
-        <input type="text" placeholder="CEO" id="title" name="title" required>
-        <br>
-        <h3>Profil Billede</h3>
-        <label for="profile-picture"></label>
-        <input type="file" id="profile-picture" name="profile-picture" required>
-        <br>
-        <!-- Image preview container -->
-        <div id="image-preview-container">
-            <img id="image-preview" style="max-width: 100%; max-height: 200px;">
+        <div class="create-user-form">
+            <form id="create-user-form">
+                <label for="username">Brugernavn (Til login)</label>
+                <br>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Adgangskode</label>
+                <br>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <label for="confirm-password">Bekræft adgangskode</label>
+                <br>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <br>
+                <label for="name">Navn</label>
+                <br>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="title">Titel i firmaet </label>
+                <br>
+                <input type="text" placeholder="CEO" id="title" name="title" required>
+                <br>
+                <h3>Profil Billede</h3>
+                <p>Kun jpg, png, jpeg, gif og webp tilladt</p>
+                <label for="profile-picture"></label>
+                <input type="file" id="profile-picture" name="profile-picture" required>
+                <br>
+                <!-- Image preview container -->
+                <div id="image-preview-container">
+                    <img id="image-preview" style="max-width: 100%; max-height: 200px;">
+                </div>
+                <br>
+                <input type="submit" value="Opret bruger" onclick="uploadUser(event)" id="submit">
+            </form>
         </div>
-        <br>
-        <input type="submit" value="Opret bruger" onclick="uploadUser(event)" id="submit">
-    </form>
 </div>
 <div id="footer-placeholder"></div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
