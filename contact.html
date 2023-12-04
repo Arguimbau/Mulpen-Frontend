@@ -15,73 +15,8 @@
 <div id="header-placeholder"></div>
 
 <section>
-    <ul class="members">
-        <li>
-            <div class="profilePicture">
-            <img src="images/profile1.jpg" alt="Profile image">
-            </div>
-            <div>
-                <strong>Amalie Vixø Drøscher</strong>
-                <br>
-                Administrerende direktør
-                Tilrettelægger, fotograf og klipper
-                <br>
-                <strong>+45 2064 9953</strong>
-                <br>
-                <a href="mailto:amalie@mulpen.dk">amalie@mulpen.dk</a>
-            </div>
-        </li>
+    <ul class="members" id="dynamicMembers">
 
-        <li>
-            <div class="profilePicture" >
-            <img src="images/profile2.jpg" alt="Profile image">
-            </div>
-            <div>
-                <strong>Konrad Jon</strong>
-                <br>
-                Underdirektør
-                <br>
-                Producer og økonomiansvarlig
-                <br>
-                <strong>+45 3131 9391</strong>
-                <br>
-                <a href="mailto:konrad@mulpen.dk">konrad@mulpen.dk</a>
-            </div>
-        </li>
-
-        <li>
-            <div class="profilePicture">
-            <img src="images/profile3.jpg" alt="Profile image">
-            </div>
-            <div>
-                <strong>Emil Holmsteen</strong>
-                <br>
-                Co-founder
-                <br>
-                Skuespiller og idéudvikler
-                <br>
-                <strong>+45 7170 0678</strong>
-                <br>
-                <a href="mailto:emil@mulpen.dk">emil@mulpen.dk</a>
-            </div>
-        </li>
-
-        <li>
-            <div class="profilePicture">
-            <img src="images/profile4.jpg" alt="Profile image">
-            </div>
-            <div>
-                <strong>Gustav Halfdan</strong>
-                <br>
-                Co-founder
-                <br>
-                Komiker og idéudvikler
-                <br>
-                <strong>+45 2032 1659</strong>
-                <br>
-                <a href="mailto:gustav@mulpen.dk">gustav@mulpen.dk</a>
-            </div>
-        </li>
     </ul>
     <!-- Ændring -->
 <br>
@@ -97,8 +32,13 @@
 </section>
 </div>
 <div id="footer-placeholder"></div>
+<script src="js/contact.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/footerHeader.js"></script>
+<script>
+    var $ = jQuery.noConflict();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(function(){
         $("#header-placeholder").load("/objects/header.html");
