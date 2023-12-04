@@ -1,18 +1,17 @@
 /* font */
 @font-face {
-    font-family: 'Akkurat-Bold';
-    src: url("/font/Akkurat-Bold.ttf") format('truetype');
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
 }
 
 * {
-    font-family: 'Akkurat-Bold', sans-serif;
-
+    font-family: 'run', sans-serif;
 }
 
 /* entire site style */
 body {
     background-color: #E4F4E5 !important;
-    font-family: 'Akkurat-Bold', sans-serif;
+    font-family: 'run', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;

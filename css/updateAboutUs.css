@@ -1,0 +1,52 @@
+/* font */
+@font-face {
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
+}
+
+* {
+    font-family: 'run', sans-serif;
+}
+
+/* entire site style */
+body {
+    background-color: #E4F4E5 !important;
+    font-family: 'run', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* update form + buttons */
+.updateAboutUsForm {
+    margin-bottom: -3%;
+    margin-left: 3%;
+    border-radius: 4%;
+    padding: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    transition: background-color 200ms;
+}
+
+/* all the buttons position */
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -15%;
+    width: 130%;
+    max-width: 1000%;
+}
+
+textarea:hover {
+    cursor: text;
+    background-color: #E4F4E5;
+}
+
+/* upload button */
+#updateAboutUsButton {
+    margin-left: 5%;
+}
