@@ -1,15 +1,10 @@
 @font-face {
-    font-family: 'Akkurat-Bold';
-    src: url("/font/Akkurat-Bold.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: 'Akkurat';
-    src: url("/font/Akkurat.ttf") format('truetype');
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
 }
 
 * {
-    font-family: 'Akkurat-Bold', sans-serif;
+    font-family: 'run', sans-serif;
 }
 
 /* hello */
@@ -85,5 +80,5 @@ video {
     width: 550px;
     height: 10vh;
     overflow-wrap: break-word;
-    font-family: 'Akkurat', sans-serif;
+    font-family: 'run', sans-serif;
 }

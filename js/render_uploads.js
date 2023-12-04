@@ -22,6 +22,7 @@ function createMediaElement(url) {
     source.src = url;
     source.type = "video/mp4";
     video.appendChild(source);
+    video.appendChild(source);
     div.appendChild(video);
   } else if (audioExtenstions.includes(extension)) {
     const audio = document.createElement("audio");
