@@ -36,7 +36,7 @@ async function loadSlideshow() {
         const gallery = document.createElement("div");
         gallery.classList.add("gallery")
 
-        const newElement = createMediaElement(`${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`);
+        const newElement = createMediaElement(`${API_BASE}/slideshow/uploadSlideshow/${encodeURIComponent(media.filePath)}`);
 
         mediaContainer.appendChild(gallery)
         gallery.appendChild(fullImage);
