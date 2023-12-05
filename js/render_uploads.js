@@ -5,6 +5,9 @@ const audioExtenstions = ["mp3", "wav", "ogg"];
 var fileTypeSelect = document.getElementById("type")
 
 function createMediaElement(url) {
+
+    fileTypeSelect = document.getElementById("type")
+
     const extension = url.split(".").pop();
 
     const div = document.createElement("div");
@@ -38,6 +41,14 @@ function createMediaElement(url) {
     }
 
     return div;
+}
+
+function clearMediaElements(container) {
+    const mediaContainer = document.getElementById("media-container")
+    // Assuming 'container' is the parent element that holds the created media elements
+    while (mediaContainer.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 }
 
 async function loadMedias() {
@@ -74,6 +85,13 @@ async function loadMedias() {
 }
 
 fileTypeSelect.addEventListener("change", async () => {
+    const mediaContainer = document.getElementById("media-container")
+    const descElements = mediaContainer.getElementsByClassName("desc");
+
+    while (descElements.length > 0) {
+        descElements[0].remove();
+    }
+    clearMediaElements(mediaContainer)
     await loadMedias()
 })
 
