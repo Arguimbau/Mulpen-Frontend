@@ -1,4 +1,5 @@
 // upload file to site
+// hello
 function uploadFile() {
     var fileInput = document.getElementById('fileInput');
     var file = fileInput.files[0];
