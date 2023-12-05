@@ -168,7 +168,7 @@ footer{
 
 
 .members li:hover .profilePicture img {
-    content: none; /* Reset to none for other cases */
+    content: none;
 }
 
 .members li .profilePicture img {
