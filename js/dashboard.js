@@ -9,5 +9,5 @@ document.getElementById("logout").addEventListener("click", function () {
 });
 
 document.getElementById("uploadSlideshow").addEventListener("click", function () {
-    window.location.href = "uploadMedia.html"
+    window.location.href = "uploadSlideshow.html"
 });
