@@ -10,6 +10,7 @@ body {
     background-color: #e4f4e5;
     font-family: 'run', sans-serif;
     color: #2E475D;
+    overflow-x: hidden;
 }
 
 h2 {
