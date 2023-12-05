@@ -1,3 +1,5 @@
+// hello
+
 document.getElementById("upload").addEventListener("click", function () {
     window.location.href = "uploadMedia.html"
 });
