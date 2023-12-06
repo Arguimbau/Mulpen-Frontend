@@ -24,8 +24,10 @@ async function loadSlideshow() {
     imageUrls.forEach(url => {
       console.log(url);
       const img = document.createElement('img');
-      img.src = `${API_BASE}/slideshow/${encodeURIComponent(url.filePath)}`;
+      img.src = `${API_BASE}/slideshow/uploadSlideshow/${encodeURIComponent(url.filePath)}`;
       img.alt = 'Slideshow Image';
+      img.style.width = "100px";
+      console.log('Image source:', img.src);
       slideshowContainer.appendChild(img);
     });
 
