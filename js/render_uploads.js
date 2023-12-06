@@ -2,11 +2,9 @@ const imageExtenstions = ["jpg", "jpeg", "png", "gif", "webp"];
 const videoExtenstions = ["mp4", "mkv", "webm", "mov", "avi"];
 const audioExtenstions = ["mp3", "wav", "ogg"];
 
-var fileTypeSelect = document.getElementById("type")
+var fileTypeSelect = document.getElementById("file-type")
 
 function createMediaElement(url) {
-
-    fileTypeSelect = document.getElementById("type")
 
     const extension = url.split(".").pop();
 
@@ -19,6 +17,7 @@ function createMediaElement(url) {
         img.alt = "Image";
         div.appendChild(img);
         console.log(div)
+
     } else if (videoExtenstions.includes(extension) && fileTypeSelect.value === "video") {
         const video = document.createElement("video");
         video.controls = false;
@@ -33,13 +32,15 @@ function createMediaElement(url) {
     } else if (audioExtenstions.includes(extension) && fileTypeSelect.value === "audio") {
         const audio = document.createElement("audio");
         audio.controls = true;
+        audio.style.height = "50px"; // Set a fixed height for audio elements
         const source = document.createElement("source");
         source.src = url;
         source.type = "audio/mpeg";
         audio.appendChild(source);
         div.appendChild(audio);
+    } else {
+        return null
     }
-
     return div;
 }
 
@@ -64,23 +65,34 @@ async function loadMedias() {
     }
 
     for (const media of await medias.json()) {
-        const imageText = document.createElement("div");
-        imageText.classList.add("desc")
-        imageText.textContent = media.description
 
-        const fullImage = document.createElement("a");
-        fullImage.classList.add("image-popout")
-        fullImage.href = `${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`
 
-        const gallery = document.createElement("div");
-        gallery.classList.add("gallery")
 
         const newElement = createMediaElement(`${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`);
 
-        mediaContainer.appendChild(gallery)
-        gallery.appendChild(fullImage);
-        fullImage.appendChild(newElement)
-        gallery.appendChild(imageText)
+
+
+        if (newElement != null) {
+
+            const fullImage = document.createElement("a");
+            fullImage.classList.add("image-popout")
+            fullImage.href = `${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`
+
+            const gallery = document.createElement("div");
+            gallery.classList.add("gallery")
+
+            mediaContainer.appendChild(gallery)
+            gallery.appendChild(fullImage);
+            fullImage.appendChild(newElement)
+
+
+
+            const imageText = document.createElement("div");
+            imageText.classList.add("desc")
+            imageText.textContent = media.description
+            gallery.appendChild(imageText)
+        }
+
     }
 }
 

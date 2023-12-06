@@ -19,6 +19,8 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column;
+
+
 }
 
 /* upload logo style */
@@ -37,12 +39,12 @@ body {
 
     transition: transform 150ms ease-in;
     z-index: 10;
+}
 
     :is(svg) {
         width: 40%;
         height: 40%;
     }
-}
 
 
 /* upload form image + buttons */

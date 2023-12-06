@@ -14,10 +14,13 @@ body {
     overflow-x: hidden;
 }
 
+
 #media-container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap
 }
 
 
@@ -64,6 +67,13 @@ video {
     outline: 0px;
 }
 
+.gallery audio {
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 25%;
+    z-index: 2;
+}
 
 .gallery video {
     width: 600px;
