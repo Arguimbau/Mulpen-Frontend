@@ -1,24 +1,25 @@
 @font-face {
-    font-family: 'Akkurat-Bold';
-    src: url("/font/Akkurat-Bold.ttf") format('truetype');
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
 }
 
 * {
-    font-family: 'Akkurat-Bold', sans-serif;
+    font-family: 'run', sans-serif;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-    font-size: xxx-large;
-}
+/* hello */
 
 body {
     background-color: #E4F4E5 !important;
+    overflow-x: hidden;
 }
 
 #media-container {
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
 }
 
 
@@ -67,18 +68,19 @@ video {
 
 
 .gallery video {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 337.5px;
     object-fit: cover;
 }
 
 .desc {
     color: #FFFFFF;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 250px;
-    height: 5vh;
+    width: 550px;
+    height: 10vh;
+    overflow-wrap: break-word;
+    font-family: 'run', sans-serif;
 }
