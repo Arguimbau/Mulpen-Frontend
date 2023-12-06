@@ -17,6 +17,9 @@ async function loadSlideshow() {
     const imageUrls = await response.json();
     console.log(imageUrls);
 
+    // Clear existing content in the slideshow container
+    slideshowContainer.innerHTML = '';
+
     // Create an image element for each URL
     imageUrls.forEach(url => {
       console.log(url);
@@ -38,7 +41,16 @@ function startSlideshow() {
   const nextImageDelay = 4000;
   let currentImageCounter = 0;
 
-  slideshowImages[currentImageCounter].style.opacity = 1;
+  // Check if there are images to display
+  if (slideshowImages.length === 0) {
+    console.warn("No images found for the slideshow.");
+    return;
+  }
+
+  // Hide all images except the first one
+  slideshowImages.forEach((img, index) => {
+    img.style.opacity = index === 0 ? 1 : 0;
+  });
 
   setInterval(nextImage, nextImageDelay);
 
