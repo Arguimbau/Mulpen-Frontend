@@ -4,9 +4,6 @@ async function loadSlideshow() {
   try {
     const response = await fetch(`${API_BASE}/slideshow/all`, {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      },
       mode: "cors"
     });
 
@@ -26,7 +23,8 @@ async function loadSlideshow() {
       const img = document.createElement('img');
       img.src = `${API_BASE}/slideshow/uploadSlideshow/${encodeURIComponent(url.filePath)}`;
       img.alt = 'Slideshow Image';
-      img.style.width = "100px";
+      img.style.width = "40%";
+      img.style.
       console.log('Image source:', img.src);
       slideshowContainer.appendChild(img);
     });
