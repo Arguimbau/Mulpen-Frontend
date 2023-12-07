@@ -23,10 +23,11 @@ async function loadSlideshow() {
       const img = document.createElement('img');
       img.src = `${API_BASE}/slideshow/uploadSlideshow/${encodeURIComponent(url.filePath)}`;
       img.alt = 'Slideshow Image';
-      img.style.width = "40%";
-      img.style.maxWidth = "40%";
-      img.style.height = "auto";
-      img.style.maxHeight = "60%";
+      img.style.width = "600px";
+      img.style.maxWidth = "600px";
+      img.style.height = "400px";
+      img.style.maxHeight = "400px";
+      img.style.marginBottom = "12%";
       img.style.boxSizing = "border-box";
       console.log('Image source:', img.src);
       slideshowContainer.appendChild(img);
