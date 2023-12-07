@@ -24,7 +24,10 @@ async function loadSlideshow() {
       img.src = `${API_BASE}/slideshow/uploadSlideshow/${encodeURIComponent(url.filePath)}`;
       img.alt = 'Slideshow Image';
       img.style.width = "40%";
-      img.style.
+      img.style.maxWidth = "40%";
+      img.style.height = "auto";
+      img.style.maxHeight = "60%";
+      img.style.boxSizing = "border-box";
       console.log('Image source:', img.src);
       slideshowContainer.appendChild(img);
     });
