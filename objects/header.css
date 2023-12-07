@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
+}
+
+* {
+    font-family: 'run', sans-serif;
+
+}
 li, a {
-    font-family: Arial, sans-serif;
+    font-family: 'run', sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: black;
