@@ -6,8 +6,6 @@ li, a {
     text-decoration: none;
 }
 
-
-
 header{
     display: flex;
     width: 112%;
@@ -47,4 +45,3 @@ header{
     height: 10%;
     padding-left: 5px;
 }
-
