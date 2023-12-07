@@ -62,19 +62,43 @@ body {
 
 
 .gallery {
+    position: relative;
     align-content: center;
     margin-top: 20px;
     margin-bottom: 50px;
     margin-left: 30px;
-    border: 1px solid #ccc;
+    border: 5px solid #5B1010;
     float: left;
     width: auto;
+    height: 340px;
+    padding: 0;
     background-color: #5B1010;
 }
 
 .gallery:hover {
     border: 1px solid #777;
     animation: fadein 0.5s forwards;
+}
+
+
+.gallery .desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E4F4E5;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 750px;
+    font-family: 'run', sans-serif;
+    font-size: 70px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.gallery:hover .desc {
+    opacity: 1;
 }
 
 .gallery:not:hover {
@@ -101,7 +125,7 @@ body {
 }
 
 video {
-    outline: 0px;
+    outline: 0;
 }
 
 .gallery audio {
@@ -116,16 +140,4 @@ video {
     width: 600px;
     height: 337.5px;
     object-fit: cover;
-}
-
-.desc {
-    color: #FFFFFF;
-    padding: 10px;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 550px;
-    height: 10vh;
-    overflow-wrap: break-word;
-    font-family: 'run', sans-serif;
 }

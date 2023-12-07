@@ -87,9 +87,9 @@ async function loadMedias() {
 
 
 
-            const imageText = document.createElement("div");
+           const imageText = document.createElement("div");
             imageText.classList.add("desc")
-            imageText.textContent = media.description
+            imageText.textContent = media.description.toUpperCase()
             gallery.appendChild(imageText)
         }
 
