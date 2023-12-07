@@ -18,28 +18,34 @@ function createDeleteButton(id) {
 }
 
 async function deleteMedia(id) {
-    try {
-        const response = await fetch(`${API_BASE}/media/delete/${id}`, {
-            method: "DELETE",
-            mode: "cors"
-        });
+    // Ask the user for confirmation
+    const confirmed = window.confirm("Er du sikker på at du vil slette den valgte side?");
 
-        if (!response.ok) {
-            console.error("Error deleting media");
-            return;
+    // If the user confirms, proceed with deletion
+    if (confirmed) {
+        try {
+            const response = await fetch(`${API_BASE}/media/delete/${id}`, {
+                method: "DELETE",
+                mode: "cors"
+            });
+
+            if (!response.ok) {
+                console.error("Error deleting media");
+                return;
+            }
+
+            // Remove the deleted media element from the UI
+            const mediaElement = document.getElementById(`media-${id}`);
+            if (mediaElement) {
+                mediaElement.remove();
+                location.reload();
+            }
+        } catch (error) {
+            console.error("Error deleting media", error);
         }
-
-        // Remove the deleted media element from the UI
-        const mediaElement = document.getElementById(`media-${id}`);
-        if (mediaElement) {
-            mediaElement.remove();
-            location.reload();
-
-        }
-    } catch (error) {
-        console.error("Error deleting media", error);
     }
 }
+
 
 function createMediaElement(url, id, description) {
     const extension = url.split(".").pop();
