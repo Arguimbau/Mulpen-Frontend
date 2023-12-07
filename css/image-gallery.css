@@ -18,8 +18,11 @@ body {
 }
 
 #media-container {
-
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Adjust as needed for your layout */
 }
+
 
 
 .gallery {
@@ -29,9 +32,17 @@ body {
     margin-left: 30px;
     border: 1px solid #ccc;
     float: left;
-    width: auto;
+    width: calc(33.33% - 60px); /* Set the width for each gallery item */
     background-color: #5B1010;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center;
+    object-fit: cover;
 }
+
 
 .gallery:hover {
     border: 1px solid #777;
@@ -75,10 +86,11 @@ video {
 .desc {
     color: #FFFFFF;
     padding: 10px;
-    text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 250px;
     height: 5vh;
+    margin-left: 5%;
+    margin-top: 10px; /* Adjust margin as needed */
 }
