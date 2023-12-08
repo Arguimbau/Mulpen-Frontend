@@ -101,7 +101,6 @@
     width: 50vh;
     margin-top: 20vh;
     position: absolute; /* Changed to absolute positioning */
-    top: 5vh; /* Adjusted top positioning */
     left: 50%; /* Centered horizontally */
     transform: translateX(-49%); /* Centered horizontally */
     font-family: Arial, Helvetica, sans-serif;
