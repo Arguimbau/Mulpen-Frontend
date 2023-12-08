@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e4f4e5;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.create-user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}

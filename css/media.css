@@ -1,24 +1,26 @@
 /* font */
 @font-face {
-    font-family: 'Akkurat-Bold';
-    src: url("/font/Akkurat-Bold.ttf") format('truetype');
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
 }
 
 * {
-    font-family: 'Akkurat-Bold', sans-serif;
+    font-family: 'run', sans-serif;
 
 }
 
 /* entire site style */
 body {
     background-color: #E4F4E5 !important;
-    font-family: 'Akkurat-Bold', sans-serif;
+    font-family: 'run', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     flex-direction: column;
+
+
 }
 
 /* upload logo style */
@@ -37,12 +39,12 @@ body {
 
     transition: transform 150ms ease-in;
     z-index: 10;
+}
 
     :is(svg) {
         width: 40%;
         height: 40%;
     }
-}
 
 
 /* upload form image + buttons */

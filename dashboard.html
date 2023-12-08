@@ -15,12 +15,19 @@
 </head>
 <body>
 <div class="container">
-    <div id="header-placeholder">
-    </div>
+    <div id="header-placeholder"></div>
     <div id="buttons">
+        <button id="logout">Log ud</button>
+
         <button id="upload">Upload en video</button>
 
         <button id="delete">Slet en video</button>
+
+        <button id="uploadSlideshow">Upload billede til slideshow</button>
+
+        <button id ="deleteUser">Slet bruger</button>
+
+        <button id="createUser">Opret bruger</button>
     </div>
 </div>
 <div id="footer-placeholder"></div>
@@ -34,6 +41,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 <script>
+
+
     $(function () {
         $("#header-placeholder").load("/objects/header.html");
         $("#footer-placeholder").load("/objects/footer.html");

@@ -1,0 +1,167 @@
+body {
+    color: black;
+    font-family: Akkurat-bold, sans-serif;
+    background-color:#e4f4e5 !important;
+}
+
+.container{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+#header-placeholder {
+
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+h1, h2 {
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.logo1{
+    background-image: url("/images/mulpenlogo3.png");
+    z-index: 100;
+    background-repeat:no-repeat;
+    background-position:left;
+    background-size: contain;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.members {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.members li {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px 30px 10px;
+    width: calc(33.33% - 20px);
+    max-width: 200px;
+    height: 320px;
+}
+
+@media (max-width: 768px) {
+    .members li {
+        width: calc(50% - 20px);
+    }
+}
+
+.members img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.map {
+    filter: grayscale(70%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    justify-content: right;
+    display: inline-block;
+    padding: 0px 30px;
+    cursor: pointer;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #5b1010;
+}
+
+.logo {
+    width: 8%;
+    height: 8%;
+    padding-left: 5px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: #e4f4e5;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+}
+
+.some {
+    width: 50px;
+    height: 50px;
+}
+
+#footer-placeholder {
+    position: relative;
+    height: 10vh;
+    clear: both;
+}
+
+.profilePicture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.members li:hover .profilePicture img {
+    content: none;
+}
+
+.members li .profilePicture img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
