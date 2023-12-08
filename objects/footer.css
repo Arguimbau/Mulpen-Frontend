@@ -1,7 +1,7 @@
 footer{
     position: fixed;
     bottom: 0;
-    left: 51%;
+    left: 50%;
     transform: translateX(-50%);
     background-color: #e4f4e5;
     width: 100%;
@@ -19,4 +19,8 @@ footer{
 /* For space between the logos */
 .some:first-child {
     margin-right: 50px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
