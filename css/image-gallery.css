@@ -1,28 +1,26 @@
 @font-face {
-    font-family: 'Akkurat-Bold';
-    src: url("/font/Akkurat-Bold.ttf") format('truetype');
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
 }
 
 * {
-    font-family: 'Akkurat-Bold', sans-serif;
+    font-family: 'run', sans-serif;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-    font-size: xxx-large;
-}
+/* hello */
 
 body {
     background-color: #E4F4E5 !important;
+    overflow-x: hidden;
 }
 
 #media-container {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-between; /* Adjust as needed for your layout */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
 }
-
 
 
 .gallery {
@@ -32,17 +30,9 @@ body {
     margin-left: 30px;
     border: 1px solid #ccc;
     float: left;
-    width: calc(33.33% - 60px); /* Set the width for each gallery item */
+    width: auto;
     background-color: #5B1010;
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    text-align: center;
-    object-fit: cover;
 }
-
 
 .gallery:hover {
     border: 1px solid #777;
@@ -78,19 +68,19 @@ video {
 
 
 .gallery video {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 337.5px;
     object-fit: cover;
 }
 
 .desc {
     color: #FFFFFF;
     padding: 10px;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 250px;
-    height: 5vh;
-    margin-left: 5%;
-    margin-top: 10px; /* Adjust margin as needed */
+    width: 550px;
+    height: 10vh;
+    overflow-wrap: break-word;
+    font-family: 'run', sans-serif;
 }
