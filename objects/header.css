@@ -1,19 +1,32 @@
+@font-face {
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
+}
+* {
+    font-family: 'run', sans-serif;
+
+}
+
 li, a {
-    font-family: Arial, sans-serif;
+    font-family: 'run', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
 }
 
+
+
 header{
     display: flex;
-    width: 100%;
+    width: 112%;
     height: fit-content;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10% 10px 0;
     z-index: 2;
+    white-space: nowrap;
+    max-width: 100%
 }
 
 .nav {
@@ -43,6 +56,5 @@ header{
 .logo{
     width: 10%;
     height: 10%;
-    padding-left: 15px;
+    padding-left: 5px;
 }
-
