@@ -85,12 +85,23 @@ async function loadMedias() {
             gallery.appendChild(fullImage);
             fullImage.appendChild(newElement)
 
-
-
            const imageText = document.createElement("div");
             imageText.classList.add("desc")
             imageText.textContent = media.description.toUpperCase()
             gallery.appendChild(imageText)
+
+            imageText.addEventListener("click", () => {
+                const closestGallery = imageText.closest(".gallery");
+
+                if (closestGallery) {
+                    const videoElement = closestGallery.querySelector("video");
+
+                    if (videoElement) {
+                        videoElement.click();
+                    }
+                }
+            });
+
         }
 
     }
@@ -142,6 +153,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             clearTimeout(previewTimeout);
             previewTimeout = null;
             stopPreview(video);
+        });
+
+        video.addEventListener('click', () => {
+            // Modify the appearance of the page when the video is clicked
+            document.body.style.backgroundColor = ''; // Change background color to black, for example
+            // Add more styling changes or other actions as needed
         });
     });
 });

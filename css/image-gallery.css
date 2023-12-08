@@ -19,6 +19,7 @@ body {
     background-color: #e4f4e5;
     padding-top: 5%;
     padding-bottom: 5%;
+
 }
 
 
@@ -40,16 +41,16 @@ body {
 
     width: 6%;
 
-
     margin-left: 75.1%;
     margin-bottom: 1%;
 }
 
 
-#file-type:hover{
-    background: url('/images/UI Icons/Dropdown_selected.png');
-    /*border-color: blue;*/
+/* #file-type:hover{
+    background: url('../images/UI Icons/Dropdown_selected.png');
+    /*border-color: blue;
 }
+*/
 
 
 #media-container {
@@ -95,9 +96,11 @@ body {
     font-size: 70px;
     opacity: 0;
     transition: opacity 1s ease;
+    cursor: pointer;
 }
 
 .gallery:hover .desc {
+    cursor: pointer;
     opacity: 1;
 }
 
@@ -110,14 +113,14 @@ body {
         transform: scale(1)
     }
     to {
-        transform: scale(1.2);
+        transform: scale(1.05);
     }
 }
 
 
 @keyframes fadeout {
     from {
-        transform: scale(1.2);
+        transform: scale(1.05);
     }
     to {
         transform: scale(1);
