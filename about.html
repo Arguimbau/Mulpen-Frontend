@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:vertical-align="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +7,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="objects/header.css">
     <link rel="stylesheet" href="objects/footer.css">
+    <script src="/js/config.js"></script>
     <title>Mulpen</title>
 </head>
 <body>
 <div class="container">
     <div id="header-placeholder"></div>
 
-    <div class="video-container">
-        <video autoplay muted loop id="myVideo">
-            <source src="images/Mulpen_Hjemmeside_video.mp4" type="video/mp4">
-        </video>
+    <div class="textContainer">
+    <div class="about">
+        <h2>Hvem er Mulpen?</h2>
+
+    <p>
+        Mulpen Entertainment er et kreativt selskab, der producerer og udvikler underholdning.
+        <br>
+        Vores mål er at skabe originalt indhold, der drager publikum.
+        <br>
+        Vi prioriterer den kreative proces og at rykke grænserne for hvordan man laver underholdning
+        <br>
+        i form af TV-serier, podcast, SoMe, reality, dokumentarer m.m.
+    </p>
     </div>
 
-    <p class="description">
-        Vi er et kreativt selsskab
-        <br>
-        der udvikler og producerer
-        <br>
-        underholdning.
-        <br>
-        <br>
-        Er vi ikke søde?
-        <br>
-        <br>
-        <label for="Ja">Tjo</label>
-        <input type="checkbox" id="Ja">
-        <label for="VedIkke">Ved ikke</label>
-        <input type="checkbox" id="VedIkke">
-        <label for="Naeh">Næh</label>
-        <input type="checkbox" id="Naeh">
-    </p>
+    <div class="intro-slideshow">
+    </div>
+    </div>
+
 </div>
 <div id="footer-placeholder"></div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/footerHeader.js"></script>
-<script src="js/index.js"></script>
+<script src="js/renderSlideshow.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script>
-  $(function(){
-    $("#header-placeholder").load("/objects/header.html");
-    $("#footer-placeholder").load("/objects/footer.html");
-  });
+    $(function(){
+        $("#header-placeholder").load("/objects/header.html");
+        $("#footer-placeholder").load("/objects/footer.html");
+    });
 </script>
 </body>
 </html>

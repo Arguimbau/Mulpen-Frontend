@@ -18,7 +18,7 @@ document.getElementById("insta").addEventListener("click", function () {
     window.location.href = "https://www.instagram.com/mulpenmedia/"
 });
 
-document.getElementById("logout").addEventListener("click", function () {
-    logout();
-});
+
+
+
 

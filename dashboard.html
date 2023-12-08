@@ -15,19 +15,17 @@
 </head>
 <body>
 <div class="container">
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder">
+    </div>
     <div id="buttons">
         <button id="upload">Upload en video</button>
 
         <button id="delete">Slet en video</button>
 
-        <button id="create-user">Opret bruger</button>
-
-        <button id="delete-user">Slet bruger</button>
+        <button id="uploadSlideshow">Upload billede til slideshow</button>
     </div>
 </div>
 <div id="footer-placeholder"></div>
-<script src="js/config.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/footerHeader.js"></script>
 <script src="js/dashboard.js"></script>
@@ -39,7 +37,7 @@
         crossorigin="anonymous"></script>
 <script>
     $(function () {
-        $("#header-placeholder").load("/objects/adminHeader.html");
+        $("#header-placeholder").load("/objects/header.html");
         $("#footer-placeholder").load("/objects/footer.html");
     });
 </script>
