@@ -10,13 +10,23 @@ body {
 h2 {
     text-align: center;
     margin-right: 22%;
+    margin-top: 2rem; /* Add margin-top to move the heading up */
 }
 
 .about {
-    margin-top: 10%;
-    margin-left: 22%;
+
+    margin-left: 20%;
     text-align: left;
     font-size: larger;
+}
+
+.container {
+   
+}
+
+.textContainer {
+    
+
 }
 
 
