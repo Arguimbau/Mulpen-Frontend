@@ -1,17 +1,148 @@
 #deleteButton{
-background-color: #e4f4e5;
+    background-color: #e4f4e5;
     border: none;
     color: #000000;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 12px;
-    margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+#deleteButton:hover{
+    background-color: #5B1010;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
+}
+
+* {
+    font-family: 'run', sans-serif;
+}
+
+/* hello */
+
+body {
+    background-color: #E4F4E5 !important;
+    overflow-x: hidden;
+}
+
+#file-type option {
+    font-family: 'run', sans-serif;
+    background-color: #e4f4e5;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+
+#file-type{
+
+    border-color: #5B1010;
+
+    background-color: #e4f4e5;
+    font-family: 'run', sans-serif;
+    scale: 200%;
+    background: url('/images/UI Icons/Dropdown_triangle.png');
+    background-size: 98% 105%;
+
+    padding-top: .5%;
+    padding-bottom: .5%;
+    padding-left: .8%;
+
+    appearance: none;
+
+    width: 6%;
+
+    margin-left: 75.1%;
+    margin-bottom: 1%;
+}
+
+
+/* #file-type:hover{
+    background: url('../images/UI Icons/Dropdown_selected.png');
+    /*border-color: blue;
+}
+*/
+
+
+#media-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+
+.gallery {
+    position: relative;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    border: 5px solid #5B1010;
+    float: left;
+    width: auto;
+
+    padding: 0;
+    background-color: #5B1010;
+}
+
+
+
+.gallery .desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #E4F4E5;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'run', sans-serif;
+    font-size: 70px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    cursor: pointer;
+}
+
+.gallery:hover .desc {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.gallery:not:hover {
+    animation: fadout 0.5s forwards;
+}
+
+@keyframes fadein {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+
+@keyframes fadeout {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
