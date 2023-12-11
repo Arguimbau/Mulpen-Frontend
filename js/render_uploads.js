@@ -1,5 +1,5 @@
 const imageExtenstions = ["jpg", "jpeg", "png", "gif", "webp"];
-const videoExtenstions = ["mp4", "mkv", "webm", "mov", "avi"];
+const videoExtenstions = ["mp4", "mkv", "webm", "avi"];
 const audioExtenstions = ["mp3", "wav", "ogg"];
 
 var fileTypeSelect = document.getElementById("file-type");
