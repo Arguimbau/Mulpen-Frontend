@@ -78,7 +78,7 @@ function performLogin() {
                 console.log("Token in localStorage before redirect:", localStorage.getItem("authToken"));
                 setTimeout(() => {
 
-                    window.location.href = '/dashboard' + "?token=" + token;
+                    window.location.href = '/dashboard';
                 }, 1000)
             } else {
                 console.error("Login failed, Please try again");
