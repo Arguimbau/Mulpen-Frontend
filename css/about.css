@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'run';
-    src: url('font/run.ttf') format('truetype');
+    src: url('../font/run.ttf') format('truetype');
 }
 
 
@@ -23,6 +23,10 @@ h2 {
     margin-left: 22%;
     text-align: left;
     font-size: larger;
+}
+
+#aboutSectionContent {
+    font-family: Poppins, sans-serif;
 }
 
 

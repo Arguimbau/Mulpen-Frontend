@@ -25,7 +25,6 @@ body {
 }
 
 #title {
-    margin-bottom: 30%;
     margin-left: 30%;
     font-size: 300%;
 }
@@ -46,7 +45,6 @@ body {
     padding: 5%;
     border: 1px solid rgba(0, 0, 0, 0.16);
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
-    transition: background-color 200ms;
 }
 
 /* all the buttons position */
@@ -55,16 +53,33 @@ form {
     flex-direction: row;
     align-items: center;
     margin-left: -25%;
-    width: 130%;
-    max-width: 1000%;
 }
 
-textarea:hover {
-    cursor: text;
+/* select file "active mode (while you select)" style */
+input[type="file"]::file-selector-button:active {
     background-color: #E4F4E5;
 }
 
 /* upload button */
 #updateAboutUsButton {
     margin-left: 5%;
+}
+
+#updateAboutUsButton:hover{
+    background-color: #E4F4E5;
+}
+
+/* all buttons style */
+input[type="file"]::file-selector-button,
+input[type="button"] {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+
 }
