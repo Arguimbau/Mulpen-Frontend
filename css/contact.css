@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'run';
+    src: url("../font/run.ttf") format('truetype');
+}
+
 body {
     color: black;
-    font-family: Akkurat-bold, sans-serif;
+    font-family: 'run', sans-serif;
     background-color:#e4f4e5 !important;
 }
 
@@ -150,6 +155,7 @@ footer {
 }
 
 .members li:hover .profilePicture img {
+
     content: none;
 }
 
