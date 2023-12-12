@@ -1,5 +1,3 @@
-const login = "http://localhost:8080/login";
-
 function performLogin() {
     const username = document.getElementById("Username").value;
     const password = document.getElementById("Password").value;
@@ -13,7 +11,7 @@ function performLogin() {
         password: password
     };
 
-    fetch(login, {
+    fetch(API_BASE + "/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

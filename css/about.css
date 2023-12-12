@@ -1,32 +1,32 @@
+@font-face {
+    font-family: 'run';
+    src: url('../font/run.ttf') format('truetype');
+}
+
 
 body {
     margin: 0;
     padding: 0;
     background-color: #e4f4e5;
-    font-family: 'Akkurat b', sans-serif;
+    font-family: 'run', sans-serif;
     color: #2E475D;
+    overflow-x: hidden;
 }
 
 h2 {
     text-align: center;
     margin-right: 22%;
-    margin-top: 2rem; /* Add margin-top to move the heading up */
 }
 
 .about {
-
-    margin-left: 20%;
+    margin-top: 10%;
+    margin-left: 22%;
     text-align: left;
     font-size: larger;
 }
 
-.container {
-   
-}
-
-.textContainer {
-    
-
+#aboutSectionContent {
+    font-family: Poppins, sans-serif;
 }
 
 
