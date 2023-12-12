@@ -56,6 +56,9 @@ async function loadMedias() {
     const medias = await fetch(`${API_BASE}/media/all`, {
         method: "GET",
         mode: "cors",
+        headers: {
+            'Content-Range': '0-99999999'
+        }
     });
 
     const mediaContainer = document.getElementById("media-container");
