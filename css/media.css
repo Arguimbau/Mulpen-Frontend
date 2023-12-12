@@ -1,7 +1,7 @@
 /* font */
 @font-face {
-    font-family: 'run';
-    src: url("/font/run.ttf") format('truetype');
+    font-family: 'Akkurat-Bold';
+    src: url("../font/run.ttf") format('truetype');
 }
 
 * {

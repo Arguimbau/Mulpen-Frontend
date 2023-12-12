@@ -6,6 +6,8 @@ function performLogin() {
 
     var snackbar = document.getElementById("snackbar");
 
+    var token
+
     const userData = {
         username: username,
         password: password
@@ -14,7 +16,7 @@ function performLogin() {
     fetch(login, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(userData)
     })
@@ -43,10 +45,41 @@ function performLogin() {
         .then(data => {
             if (data.token) {
                 // Store the token securely, for example in localStorage
-
                 localStorage.setItem("authToken", data.token);
                 console.log("Login successful");
-                window.location.href = "dashboard.html";
+
+                token = data.token
+
+                console.log("User token: " + data.token)
+
+                // Include the token in subsequent requests
+                const requestOptions = {
+                    method: "GET",  // or any other method you need
+                    headers: {
+                        "Authorization": "Bearer " + data.token
+                    }
+                };
+
+                console.log("Request Headers:", requestOptions.headers);
+
+                // Example: Fetching data from a protected endpoint
+                fetch('/dashboard', requestOptions)
+                    .then(response => response.json())
+                    .then(data => {
+
+                        console.log("Data from protected endpoint:", data);
+
+                        // Handle the data as needed
+                    })
+                    .catch(error => console.error("Error fetching data:", error));
+
+                // Redirect to the admin page (if needed)
+
+                console.log("Token in localStorage before redirect:", localStorage.getItem("authToken"));
+                setTimeout(() => {
+
+                    window.location.href = '/dashboard' + "?token=" + token;
+                }, 1000)
             } else {
                 console.error("Login failed, Please try again");
                 // Add code to handle failed login, e.g., display an error message
