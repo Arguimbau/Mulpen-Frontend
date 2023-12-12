@@ -20,13 +20,16 @@ function getUsers() {
                             <img src="${user.filePath}" alt="Profile image">
                         </div>
                         <div>
-                            <strong>${user.name}</strong>
-                            <br>
-                            ${user.title}
-                            <br>
-                            <strong>${user.phoneNumber}</strong>
-                            <br>
-                            <a href="mailto:${user.email}">${user.email}</a>
+                        <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+                        </style>
+                        <strong style="font-family: 'run', sans-serif;">${user.name}</strong>
+                        <br>
+                        <strong style="font-family: 'Poppins', sans-serif;">${user.title}</strong>
+                        <br>
+                        <strong style="font-family: 'Poppins', sans-serif;">${user.phoneNumber}</strong>
+                        <br>
+                        <a style="font-family: 'Poppins', sans-serif;" href="mailto:${user.email}">${user.email}</a>
                         </div>
                     `;
                     dynamicMembers.appendChild(userElement);
@@ -43,6 +46,12 @@ function getUsers() {
 
 function addHoverEffects() {
     const members = document.querySelectorAll('.members li');
+
+    members.forEach(member => {
+        const username = member.classList[0].replace('profile-', '');
+        const silhouetteImage = new Image();
+        silhouetteImage.src = `images/silhouettes/${username}_silhuet.png`;
+    });
 
     members.forEach(member => {
         const profilePicture = member.querySelector('.profilePicture img');
