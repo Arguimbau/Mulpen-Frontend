@@ -19,7 +19,6 @@ body {
     background-color: #e4f4e5;
     padding-top: 5%;
     padding-bottom: 5%;
-
 }
 
 
@@ -30,7 +29,7 @@ body {
     background-color: #e4f4e5;
     font-family: 'run', sans-serif;
     scale: 200%;
-    background: url('/images/UI Icons/Dropdown_triangle.png');
+    background: #e4f4e5 url('/images/UI Icons/Dropdown_triangle.png');
     background-size: 98% 105%;
 
     padding-top: .5%;
@@ -41,16 +40,16 @@ body {
 
     width: 6%;
 
+
     margin-left: 75.1%;
     margin-bottom: 1%;
 }
 
 
-/* #file-type:hover{
-    background: url('../images/UI Icons/Dropdown_selected.png');
-    /*border-color: blue;
+#file-type:hover{
+    background: url('/images/UI Icons/Dropdown_selected.png');
+    border-color: blue;
 }
-*/
 
 
 #media-container {

@@ -55,7 +55,7 @@ function clearMediaElements(container) {
 async function loadMedias() {
     const medias = await fetch(`${API_BASE}/media/all`, {
         method: "GET",
-        mode: "cors"
+        mode: "cors",
     });
 
     const mediaContainer = document.getElementById("media-container");
