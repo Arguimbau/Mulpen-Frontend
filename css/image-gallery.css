@@ -84,14 +84,14 @@ body {
 
 .gallery .desc {
     position: absolute;
-    top: 105%;
-    left: 62%;
+    top: 110%;
+    left: 33%;
     transform: translate(-50%, -50%);
     color: #000000;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 750px;
+    max-width: 640px;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     opacity: 0;
