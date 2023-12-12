@@ -29,7 +29,7 @@ body {
 
     background-color: #e4f4e5;
     font-family: 'run', sans-serif;
-    scale: 200%;
+    scale: 100%;
     background: url('/images/UI Icons/Dropdown_triangle.png');
     background-size: 98% 105%;
 
@@ -41,7 +41,7 @@ body {
 
     width: 6%;
 
-    margin-left: 75.1%;
+    margin-left: 82.1%;
     margin-bottom: 1%;
 }
 
@@ -76,24 +76,24 @@ body {
     background-color: #5B1010;
 }
 
-.gallery:hover {
+/*.gallery:hover {
     border: 1px solid #777;
     animation: fadein 0.5s forwards;
-}
+}*/
 
 
 .gallery .desc {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 105%;
+    left: 62%;
     transform: translate(-50%, -50%);
-    color: #E4F4E5;
-    text-align: center;
+    color: #000000;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 750px;
-    font-family: 'run', sans-serif;
-    font-size: 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
     opacity: 0;
     transition: opacity 1s ease;
     cursor: pointer;
@@ -107,6 +107,7 @@ body {
 .gallery:not:hover {
     animation: fadout 0.5s forwards;
 }
+
 
 @keyframes fadein {
     from {
@@ -139,7 +140,7 @@ video {
     z-index: 2;
 }
 
-.gallery video {
+.gallery img {
     width: 600px;
     height: 337.5px;
     object-fit: cover;
