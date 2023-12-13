@@ -18,28 +18,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1%;
+    margin-top: -4%;
+    margin-bottom: 0.5%;
     flex-wrap: wrap;
-    overflow: hidden;
 }
 
 .gallery {
     position: relative;
     align-content: center;
-    margin-top: 13%;
+
     margin-left: 24%;
     border: 5px solid #5B1010;
     float: left;
     width: auto;
+    margin-top: 4%;
     padding: 0;
     background-color: #5B1010;
-    overflow: hidden;
 }
 
 .gallery video {
     position: relative;
     width: 100%;
-    margin-top: 0;
+    margin-top: 4%;
     margin-bottom: 0;
 }
 
@@ -47,14 +47,13 @@ body {
     cursor: pointer;
 }
 
-h3 {
+.gallery h3 {
     position: absolute;
-    top: 110%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #000000;
     text-align: left;
-    overflow: hidden;
     text-overflow: ellipsis;
     max-width: 640px;
     font-family: 'Poppins', sans-serif;
