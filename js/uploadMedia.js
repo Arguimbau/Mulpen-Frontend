@@ -1,17 +1,14 @@
 function uploadFile() {
     var fileInput = document.getElementById('fileInput');
+    var thumbnailInput = document.getElementById('thumbnailInput');
     var file = fileInput.files[0];
+    var thumbnail = thumbnailInput.files[0];
     var description = document.getElementById('descriptionInput').value;
 
-    var authToken = localStorage.getItem("authToken"); // Get the auth token from localStorage
-
-
-    //var authToken = "Very invalid token"
+    var authToken = localStorage.getItem("authToken");
 
     if (!authToken) {
-
         console.error("No user authentication token found");
-        //return Promise.reject(new Error("No user authentication token found")); // Throw an error for fetch to catch
         var snackbar = document.getElementById('snackbar');
         snackbar.innerHTML = 'Der skete en fejl. Denne bruger har muligvis ikke rettigheder til denne funktion';
         snackbar.className = "show";
@@ -19,24 +16,25 @@ function uploadFile() {
             snackbar.className = snackbar.className.replace("show", "");
         }, 8000);
 
-
-
-
-        return Promise.reject(new Error("No user authentication token found")); // Throw an error for fetch to catch
+        return Promise.reject(new Error("No user authentication token found"));
     }
 
     var formData = new FormData();
     formData.append('file', file);
     formData.append('description', description);
-    formData.append('thumbnail', thumbnail);
+
+    // Check if thumbnail is available before appending
+    if (thumbnail) {
+        formData.append('thumbnail', thumbnail);
+    }
 
     return fetch(`${API_BASE}/media/upload`, {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${authToken}`, // Ensure the token is correctly formatted
+            'Authorization': `Bearer ${authToken}`,
         },
         mode: "cors",
-        body: formData, // Use FormData to properly handle file uploads
+        body: formData,
     })
         .then(response => {
             if (!response.ok) {
@@ -62,5 +60,5 @@ function uploadFile() {
                 snackbar.className = snackbar.className.replace("show", "");
             }, 8000);
             throw error;
-        })
+        });
 }
