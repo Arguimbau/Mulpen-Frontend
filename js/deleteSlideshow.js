@@ -25,7 +25,10 @@ async function deleteMedia(id) {
         try {
             const response = await fetch(`${API_BASE}/slideshow/deleteSlideshow/${id}`, {
                 method: "DELETE",
-                mode: "cors"
+                mode: "cors",
+                headers: {
+                    'Authorization': `Bearer ${authToken}`
+                }
             });
 
             if (!response.ok) {

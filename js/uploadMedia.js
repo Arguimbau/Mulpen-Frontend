@@ -13,7 +13,7 @@ function uploadFile() {
         console.error("No user authentication token found");
         //return Promise.reject(new Error("No user authentication token found")); // Throw an error for fetch to catch
         var snackbar = document.getElementById('snackbar');
-        snackbar.innerHTML = 'Den nuværende bruger har ikke adgang til fil-upload';
+        snackbar.innerHTML = 'Der skete en fejl. Denne bruger har muligvis ikke rettigheder til denne funktion';
         snackbar.className = "show";
         setTimeout(function () {
             snackbar.className = snackbar.className.replace("show", "");
@@ -28,6 +28,7 @@ function uploadFile() {
     var formData = new FormData();
     formData.append('file', file);
     formData.append('description', description);
+    formData.append('thumbnail', thumbnail);
 
     return fetch(`${API_BASE}/media/upload`, {
         method: 'POST',

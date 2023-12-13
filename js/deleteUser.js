@@ -55,6 +55,7 @@ $("#delete-user").on("click", function () {
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json', // Specify the content type as JSON
+            'Authorization': `Bearer ${authToken}`
         },
         body: JSON.stringify(requestData),
     })

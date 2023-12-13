@@ -38,10 +38,10 @@ $(document).ready(function () {
   }
 
   // Call the function for the first two checkboxes that redirect
-  redirectToPage('Ja', 'contact.html');
-  redirectToPage('VedIkke', 'viewVideo.html');
-  redirectToPage('Yeah', 'contact.html');
-  redirectToPage('NotSure', 'viewVideo.html');
+  redirectToPage('Ja', '/contact');
+  redirectToPage('VedIkke', '/videos');
+  redirectToPage('Yeah', '/contact');
+  redirectToPage('NotSure', '/videos');
 
   // Function to change the description when "Naeh" is clicked
   function changeDescriptionOnNaeh() {
@@ -50,7 +50,7 @@ $(document).ready(function () {
         $('.description').text("For dårligt...");
       } else {
 
-        $('.description').text("Vi er et kreativt selsskab\n\nder udvikler og producerer\n\nunderholdning.\n\nEr vi ikke søde?\n\nTjo\nVed ikke\nNæh");
+        $('.description').text("Vi er et kreativt selskab\n\nder udvikler og producerer\n\nunderholdning.\n\nEr vi ikke søde?\n\nTjo\nVed ikke\nNæh");
       }
     });
   }

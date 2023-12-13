@@ -15,7 +15,25 @@ li, a {
     text-decoration: none;
 }
 
+.production-page .logo{
+    width: 100px;
+    height: 140px;
+    margin-left: 20%;
+}
+.production-page .nav_links h3{
+    font-size: 28px;
+    font-family: 'run', sans-serif;
+    font-weight: 500;
+}
 
+.production-page .nav_links li{
+    margin-right: 100px;
+}
+
+.production-page .nav_links{
+
+    margin-right: 250px;
+}
 
 header{
     display: flex;
@@ -26,7 +44,8 @@ header{
     padding: 10px 10% 10px 0;
     z-index: 2;
     white-space: nowrap;
-    max-width: 100%
+    max-width: 100%;
+    clear: left;
 }
 
 .nav {
@@ -52,6 +71,10 @@ header{
     color: #5b1010;
     transition: all 0.3s ease 0s;
 
+}
+
+.logo:hover {
+    cursor: pointer;
 }
 
 .logo{
