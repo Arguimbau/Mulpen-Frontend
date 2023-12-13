@@ -24,7 +24,7 @@ jobs:
         run: |
           # No build steps are needed for a static frontend project
           # Simply copy the files to the workspace root
-          cp -R html/ css/ font/ images/ js/ objects/ $GITHUB_WORKSPACE
+          cp -R * $GITHUB_WORKSPACE
 
       - name: Deploy
         id: builddeploy
