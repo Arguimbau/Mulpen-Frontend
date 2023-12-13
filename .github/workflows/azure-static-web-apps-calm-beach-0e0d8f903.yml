@@ -22,9 +22,9 @@ jobs:
 
       - name: Build
         run: |
-          npm install  # Use the appropriate command for your project (e.g., npm, yarn, etc.)
-          npm run build  # Adjust the build command based on your project setup
-          cp -R css/ font/ html/ images/ js/ objects/ $GITHUB_WORKSPACE  # Copy the built artifacts to the workspace root
+          # No build steps are needed for a static frontend project
+          # Simply copy the files to the workspace root
+          cp -R html/ css/ font/ images/ js/ objects/ $GITHUB_WORKSPACE
 
       - name: Deploy
         id: builddeploy
@@ -34,7 +34,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"       # Set to repository root
-          output_location: "/"    # Set to the root of your built artifacts
+          output_location: "/"    # Set to the root of your project files
           app_artifact_location: "/" # Specify the location of your default files
 
   close_pull_request_job:
