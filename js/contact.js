@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.onload = function () {
     getUsers();
-    loadHTML('/objects/header.html', 'header-placeholder');
-    loadHTML('/objects/footer.html', 'footer-placeholder');
 };
 
 function getUsers() {
