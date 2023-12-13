@@ -24,7 +24,7 @@ jobs:
         run: |
           # No build steps are needed for a static frontend project
           # Simply copy the files to the workspace root
-          cp -R * $GITHUB_WORKSPACE
+          cp -R !(Frontend.iml|Mulpen-Frontend.iml|css|favicon.ico|font|html|images|js|objects) $GITHUB_WORKSPACE
 
       - name: Deploy
         id: builddeploy
