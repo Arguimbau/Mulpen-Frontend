@@ -87,7 +87,7 @@ async function loadMedias() {
 
            const imageText = document.createElement("div");
             imageText.classList.add("desc")
-            imageText.textContent = media.description.toUpperCase()
+            imageText.textContent = media.description
             gallery.appendChild(imageText)
 
             imageText.addEventListener("click", () => {
