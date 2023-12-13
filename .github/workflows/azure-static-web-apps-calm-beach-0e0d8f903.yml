@@ -25,7 +25,7 @@ jobs:
           cd html  # Navigate to the 'html' folder
           npm install  # Use the appropriate command for your project (e.g., npm, yarn, etc.)
           npm run build  # Adjust the build command based on your project setup
-          cp -R * $GITHUB_WORKSPACE  # Copy the built artifacts to the workspace root
+          cp -R css/ font/ html/ images/ js/ objects/ $GITHUB_WORKSPACE  # Copy the built artifacts to the workspace root
 
       - name: Deploy
         id: builddeploy
