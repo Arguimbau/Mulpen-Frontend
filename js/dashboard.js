@@ -18,3 +18,7 @@ document.getElementById("logout").addEventListener("click", function () {
 document.getElementById("uploadSlideshow").addEventListener("click", function () {
     window.location.href = "/uploadSlideshow"
 });
+
+document.getElementById("deleteSlideshow").addEventListener("click", function () {
+    window.location.href = "deleteSlideshow.html"
+});

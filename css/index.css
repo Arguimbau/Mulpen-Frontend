@@ -5,6 +5,18 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+.language-buttons {
+    display: flex;
+    justify-content: right;
+    margin-top: 0.5%;
+}
+
+#buttonDa, #buttonEn {
+    background-color: #E4F4E5;
+    margin: 0 0.5%;
+}
+
 .container {
     position: relative;
     min-height: 90vh; /* set at 90 to avoid overflow*/
@@ -12,7 +24,7 @@ body {
 
 
 p{
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 .video-container {
@@ -46,4 +58,9 @@ p{
     position: relative;
     height: 10vh;
     clear: both;
+}
+
+label{
+    font-family: 'Poppins', sans-serif;
+
 }

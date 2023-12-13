@@ -37,7 +37,8 @@ header{
     list-style: none;
     text-decoration: none;
     display: flex;
-    margin-right: 0;
+    margin-left: 3%;
+
 }
 
 .nav_links li {
@@ -57,4 +58,5 @@ header{
     width: 10%;
     height: 10%;
     padding-left: 5px;
+    margin-left: 140px;
 }
