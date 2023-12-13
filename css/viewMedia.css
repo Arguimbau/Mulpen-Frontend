@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'run';
+    src: url("/font/run.ttf") format('truetype');
+}
+
+* {
+    font-family: 'run', sans-serif;
+}
+
+body {
+    background-color: #E4F4E5 !important;
+    overflow-x: hidden;
+}
+
+#viewMedia-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.gallery {
+    position: relative;
+    align-content: center;
+    margin-top: 13%;
+    margin-left: 24%;
+    border: 5px solid #5B1010;
+    float: left;
+    width: auto;
+    padding: 0;
+    background-color: #5B1010;
+    overflow: hidden;
+}
+
+.gallery video {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.gallery video:hover {
+    cursor: pointer;
+}
+
+h3 {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 640px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    transition: opacity 1s ease;
+}
+
