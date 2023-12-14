@@ -1,24 +1,19 @@
-document.getElementById("productionLink").addEventListener("click", function () {
-    window.location.href = "videos"
+$(document).on('click', '#productionLink', function () {
+    window.location.href = "videos";
 });
 
-document.getElementById("contactLink").addEventListener("click", function () {
-    window.location.href = "contact"
+$(document).on('click', '#contactLink', function () {
+    window.location.href = "contact";
 });
 
-document.getElementById("aboutLink").addEventListener("click", function () {
-    window.location.href = "about"
+$(document).on('click', '#aboutLink', function () {
+    window.location.href = "about";
 });
 
-document.getElementById("fb").addEventListener("click", function () {
-    window.location.href = "https://www.facebook.com/profile.php?id=61553743093438"
+$(document).on('click', '#fb', function () {
+    window.location.href = "https://www.facebook.com/profile.php?id=61553743093438";
 });
 
-document.getElementById("insta").addEventListener("click", function () {
-    window.location.href = "https://www.instagram.com/mulpenmedia/"
+$(document).on('click', '#insta', function () {
+    window.location.href = "https://www.instagram.com/mulpenmedia/";
 });
-
-
-
-
-

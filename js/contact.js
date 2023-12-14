@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.onload = function () {
     getUsers();
-    loadHTML('/objects/header.html', 'header-placeholder');
-    loadHTML('/objects/footer.html', 'footer-placeholder');
 };
 
 function getUsers() {
@@ -44,30 +42,32 @@ function getUsers() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-function addHoverEffects() {
-    const members = document.querySelectorAll('.members li');
+    function addHoverEffects() {
+        const members = document.querySelectorAll('.members li');
+        const silhouetteImages = {};
 
-    members.forEach(member => {
-        const username = member.classList[0].replace('profile-', '');
-        const silhouetteImage = new Image();
-        silhouetteImage.src = `images/silhouettes/${username}_silhuet.png`;
-    });
-
-    members.forEach(member => {
-        const profilePicture = member.querySelector('.profilePicture img');
-        const username = member.classList[0].replace('profile-', '');
-
-        member.addEventListener('mouseenter', () => {
-            profilePicture.src = `images/silhouettes/${username}_silhuet.png`;
+        members.forEach(member => {
+            const username = member.classList[0].replace('profile-', '');
+            const silhouetteImage = new Image();
+            silhouetteImage.src = `images/silhouettes/${username}_silhuet.png`;
+            silhouetteImages[username] = silhouetteImage;
         });
 
-        member.addEventListener('mouseleave', () => {
-            const userData = JSON.parse(member.getAttribute('data-user'));
-            // Change back to the original picture without a timeout
-            profilePicture.src = `${userData.filePath}`;
+        members.forEach(member => {
+            const profilePicture = member.querySelector('.profilePicture img');
+            const username = member.classList[0].replace('profile-', '');
+
+            member.addEventListener('mouseenter', () => {
+                profilePicture.src = silhouetteImages[username].src;
+            });
+
+            member.addEventListener('mouseleave', () => {
+                const userData = JSON.parse(member.getAttribute('data-user'));
+                // Change back to the original picture without a timeout
+                profilePicture.src = `${userData.filePath}`;
+            });
         });
-    });
-}
+    }
 
 
 
