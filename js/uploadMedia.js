@@ -22,6 +22,7 @@ function uploadFile() {
     var formData = new FormData();
     formData.append('file', file);
     formData.append('description', description);
+    formData.append('thumbnail', thumbnail)
 
     // Check if thumbnail is available before appending
     if (thumbnail) {
