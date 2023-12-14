@@ -52,19 +52,10 @@ function performLogin() {
                 token = data.token
 
                 console.log("User token: " + data.token)
-
-                // Include the token in subsequent requests
-                const requestOptions = {
-                    method: "GET",  // or any other method you need
-                    headers: {
-                        "Authorization": "Bearer " + data.token
-                    }
-                };
-
-                console.log("Request Headers:", requestOptions.headers);
+                
 
                 // Example: Fetching data from a protected endpoint
-                fetch('/dashboard', requestOptions)
+                fetch('/dashboard')
                     .then(response => response.json())
                     .then(data => {
 
