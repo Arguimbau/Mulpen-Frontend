@@ -1,1 +1,1 @@
-const API_BASE = '13.69.198.223:8080';
+const API_BASE = 'https://13.69.198.223:8080';
