@@ -4,7 +4,15 @@ const audioExtenstions = ["mp3", "wav", "ogg"];
 
 var fileTypeSelect = document.getElementById("file-type")
 
-function createMediaElement(url) {
+
+function getFileNameFromUrl(url) {
+    const urlParts = url.split("/");
+    const lastPart = urlParts[urlParts.length - 1];
+    const filename = decodeURIComponent(lastPart);
+    return filename;
+}
+
+async function createMediaElement(url) {
 
     const extension = url.split(".").pop();
 
@@ -12,6 +20,7 @@ function createMediaElement(url) {
 
 
     if (imageExtenstions.includes(extension) && fileTypeSelect.value === "image") {
+
         const img = document.createElement("img");
         img.src = url;
         img.alt = "Image";
@@ -19,6 +28,22 @@ function createMediaElement(url) {
         console.log(div)
 
     } else if (videoExtenstions.includes(extension) && fileTypeSelect.value === "video") {
+        // Assuming you have a separate endpoint for video thumbnails
+
+        const fileName = getFileNameFromUrl(url)
+        const thumbnail = await fetch(`${API_BASE}/thumbnail/` + fileName, {
+            method: "GET",
+            mode: "cors"
+        });
+
+        //const thumbnailUrl = `${API_BASE}/media/thumbnails/${encodeURIComponent(url)}`;
+
+
+        const thumbnailImg = document.createElement("img");
+        thumbnailImg.src =
+        thumbnailImg.alt = "Video Thumbnail";
+        thumbnailImg.classList.add("thumbnail"); // Add any additional styling or classes
+
         const video = document.createElement("video");
         video.controls = false;
         video.width = 320;
@@ -26,7 +51,8 @@ function createMediaElement(url) {
         const source = document.createElement("source");
         source.src = url;
         source.type = "video/mp4";
-        video.appendChild(source);
+
+        video.appendChild(thumbnailImg);
         video.appendChild(source);
         div.appendChild(video);
     } else if (audioExtenstions.includes(extension) && fileTypeSelect.value === "audio") {
@@ -72,6 +98,7 @@ async function loadMedias() {
 
 
         const newElement = createMediaElement(`${API_BASE}/media/upload/${encodeURIComponent(media.filePath)}`);
+
 
 
 
