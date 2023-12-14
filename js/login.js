@@ -10,6 +10,9 @@ function performLogin() {
         username: username,
         password: password
     };
+    const apiUrl = "/login";
+
+    console.log("Constructed URL:", API_BASE + apiUrl);
 
     fetch(API_BASE + "/login", {
         method: "POST",
