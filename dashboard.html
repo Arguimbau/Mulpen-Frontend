@@ -8,26 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../objects/header.css">
-    <link rel="stylesheet" href="../objects/footer.css">
-    <title>Slet bruger</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="objects/header.css">
+    <link rel="stylesheet" href="objects/footer.css">
+    <title>Title</title>
 </head>
 <body>
 <div class="container">
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder">
+    </div>
     <div id="buttons">
-    <select><option value="">Vælg bruger</option></select>
-        <br>
-        <button id="delete-user">Slet bruger</button>
+        <button id="update">Redigere om os</button>
+
+        <button id="logout">Log ud</button>
+
+        <button id="upload">Upload en video</button>
+
+        <button id="delete-media">Slet en video</button>
+
+        <button id="uploadSlideshow">Upload billede til slideshow</button>
+
+        <button id="deleteSlideshow">Slet billede fra slideshow</button>
+
+        <button id ="deleteUser">Slet bruger</button>
+
+        <button id="createUser">Opret bruger</button>
     </div>
 </div>
 <div id="footer-placeholder"></div>
-<script src="../js/config.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../js/deleteUser.js"></script>
-<script src="../js/footerHeader.js"></script>
-<script src="../js/dashboard.js"></script>
+<script src="js/footerHeader.js"></script>
+<script src="js/dashboard.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -35,11 +46,12 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 <script>
+
+
     $(function () {
-        $("#header-placeholder").load("/objects/adminHeader.html");
+        $("#header-placeholder").load("/objects/header.html");
         $("#footer-placeholder").load("/objects/footer.html");
     });
-
 </script>
 </body>
 </html>
