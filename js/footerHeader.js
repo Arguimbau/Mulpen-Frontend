@@ -1,13 +1,13 @@
-$(document).on('click', '#productionLink', function () {
-    window.location.href = "videos";
+document.getElementById("productionLink").addEventListener("click", function () {
+    window.location.href = "/videos"
 });
 
-$(document).on('click', '#contactLink', function () {
-    window.location.href = "contact";
+document.getElementById("contactLink").addEventListener("click", function () {
+    window.location.href = "/contact"
 });
 
-$(document).on('click', '#aboutLink', function () {
-    window.location.href = "about";
+document.getElementById("aboutLink").addEventListener("click", function () {
+    window.location.href = "/about"
 });
 
 $(document).on('click', '#fb', function () {
