@@ -1,1 +1,1 @@
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'http://13.69.198.223:8080';
